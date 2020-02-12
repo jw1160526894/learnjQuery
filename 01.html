@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <button id="btn">按钮</button>
+    <input type="button" value="点击添加一个input元素">
+    <input type="text">
+  </div>
+  <script>
+    $(function () {
+      $('#btn').click(function () {
+        alert($(this).html())
+      })
+
+      //2.
+      $("input[type='button']").click(function () {
+        $('<input type="text" >').appendTo('div')
+      })
+
+      //3.遍历数组
+      var arr = [1, 2, 3];
+      $.each(arr, function (index, item) {
+        console.log(index + '---' + item)
+      })
+    })
+  </script>
+
+</body>
+
+</html>
