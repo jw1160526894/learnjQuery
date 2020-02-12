@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery.min.js"></script>
+</head>
+
+<body>
+  <ul>
+    <li class="box"><span>1</span></li>
+    <li class="box">2</li>
+    <span>aaa</span>
+    <span>sss</span>
+    <li>123</li>
+  </ul>
+
+  <script>
+    //1.子元素选择器   >
+    //$('ul>span').css('background', 'red')
+
+    //2.选中class为box的下一个li  相邻兄弟选择器 +
+    //$('.box+li').css('background', 'green')
+
+    //3.选中class为box 后面的所有兄弟元素
+    //$('.box~*').css('color', 'red')
+
+    //4.选中class为box 后面的所有span元素
+    $('.box~span').css('color', 'red')
+  </script>
+</body>
+
+</html>
