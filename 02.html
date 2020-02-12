@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery对象</title>
+  <script src="jquery.min.js"></script>
+</head>
+
+<body>
+  <div></div>
+  <button>测试1</button>
+  <button>测试2</button>
+  <button id="btn3">测试3</button>
+  <button>测试4</button>
+  <script>
+    //jQuery对象是一个包含所有匹配的任意多个dom元素的伪数组对象
+
+    //1.size() / length:  包含的dom元素个数
+    console.log($('button').size(), $('button').length)
+
+    //2.得到对应索引的dom元素
+    console.log($('button')[1].innerHTML, $('button').get(1).innerHTML)
+
+    //3.each():遍历包含的所有dom元素
+    $('button').each(function (index, domEle) {
+      //console.log(this);
+      console.log(index + '----' + domEle.innerHTML)
+    })
+
+    //4.index()得到所在兄弟元素中的下标
+    console.log($('#btn3').index()) //3
+  </script>
+
+
+</body>
+
+</html>
