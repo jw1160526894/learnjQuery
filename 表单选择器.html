@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery.min.js"></script>
+</head>
+
+<body>
+
+  <input type="text">
+  <input type="text" disabled>
+
+  篮球：<input type="checkbox" name="ball" value="basket" checked>
+  足球：<input type="checkbox" name="ball" value="foot">
+  乒乓球：<input type="checkbox" name="ball" value="pingpang" checked>
+
+  <select name="m" id="">
+    <option value="aa">a</option>
+    <option value="bb" selected>b</option>
+    <option value="cc">c</option>
+  </select>
+  <script>
+    //1.选择不可点击的文本框  :text
+    $(':text:disabled').css('background', 'red')
+
+    //2.选择选中的复选框
+    console.log($(':checkbox:checked').length) //2
+
+    //3.显示选择城市的名称 和 value
+    console.log($('select>option:selected').html()) //b
+    console.log($('select').val()) //bb
+  </script>
+</body>
+
+</html>

@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="jquery.min.js"></script>
-</head>
+  <body>
+    <div class="box">aa</div>
+    <ul>
+      <li title="bb" class="box">111</li>
+      <li title="aaa">222</li>
+      <li style="display: none;">sad</li>
+    </ul>
+    <div class="a">123123</div>
+    <div>7355</div>
+    <div class="box">bb</div>
 
-<body>
-  <div class="box">aa</div>
-  <ul>
-    <li title="bb" class="box">111</li>
-    <li title="aaa">222</li>
-    <li style="display: none;">sad</li>
-  </ul>
-  <div class="a">123123</div>
-  <div>7355</div>
-  <div class="box">bb</div>
+    <ol>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ol>
 
-  <script>
-    //1. :first 选择第一个class为box的元素
-    $('.box:first').css('background', 'red');
-    //2. :last
-    $('.box:last').css('background', 'red');
-    //3. :not 选择class属性不为box的div
-    $('div:not(.box)').css('color', 'green');
+    <script>
+      //1. :first 选择第一个class为box的元素
+      $('.box:first').css('background', 'red')
+      //2. :last
+      $('.box:last').css('background', 'red')
+      //3. :not 选择class属性不为box的div
+      $('div:not(.box)').css('color', 'green')
 
-    //选择第二个和第三个div元素
-    $('div:gt(0):lt(2)').css('background', 'yellow')
+      //选择第二个和第三个div元素
+      $('div:gt(0):lt(2)').css('background', 'yellow')
 
-    //选择内容为222的li
-    $('li:contains("222")').css('fontSize', '30px')
+      //选择内容为222的li
+      $('li:contains("222")').css('fontSize', '30px')
 
-    //选择隐藏的div
-    $('li:hidden').css({
-      'display': 'block',
-      'color': 'pink'
-    })
+      //选择隐藏的div
+      $('li:hidden').css({
+        display: 'block',
+        color: 'pink'
+      })
 
-    //选择有title属性的li
-    $('li[title]').css('color', 'yellowgreen')
+      //选择有title属性的li
+      $('li[title]').css('color', 'yellowgreen')
 
-    //选择title属性为bb的元素
-    $('[title="bb"]').css('color', 'purple')
-  </script>
-</body>
+      //选择title属性为bb的元素
+      $('[title="bb"]').css('color', 'purple')
 
+      //4 :odd 改变ol奇数行的背景色为green
+      $('ol>li:odd').css('background', 'green')
+    </script>
+  </body>
 </html>
